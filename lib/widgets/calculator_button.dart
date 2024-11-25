@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controllers/theme_controller.dart';
+
 class CalculatorButton extends StatelessWidget {
 
   final String? label;
@@ -12,12 +14,13 @@ class CalculatorButton extends StatelessWidget {
     super.key, 
     required this.label,
     this.onPressed,
-    required this.labelColor, 
+    this.labelColor, 
     this.bgColor});
 
   @override
   Widget build(BuildContext context) {
 
+    ThemeController themeController = Get.put(ThemeController());
     var size = Get.size;
 
     return GestureDetector(
@@ -31,7 +34,8 @@ class CalculatorButton extends StatelessWidget {
         child: Center(
           child: Text(label!,
             style: TextStyle(
-              color: labelColor,
+              color: labelColor ?? (themeController.isDarkMode.value 
+                            ? Colors.white : Colors.black),
               fontSize: size.width * 0.065,
             ),
           ),

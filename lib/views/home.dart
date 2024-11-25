@@ -3,7 +3,6 @@ import 'package:basic_calculator_app/widgets/calculator_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../controllers/theme_controller.dart';
 
 class Home extends StatelessWidget {
@@ -41,7 +40,6 @@ class Home extends StatelessWidget {
                             await SharedPreferences.getInstance();
                         sharedPreferences.setString("theme", "light");
                         // Get.reloadAll(force: true);
-                        print("Changed to Light Theme");
                       },
                       child: Icon(Icons.light_mode, 
                         color: themeController.isDarkMode.value 
@@ -60,7 +58,6 @@ class Home extends StatelessWidget {
                             await SharedPreferences.getInstance();
                         sharedPreferences.setString("theme", "dark");
                         // Get.reloadAll(force: true);
-                        print("Changed to Dark Theme");
                       },
                       child: Icon(Icons.dark_mode, 
                         color: themeController.isDarkMode.value 
@@ -99,22 +96,16 @@ class Home extends StatelessWidget {
                       label: '7',
                       onPressed: () =>
                           calculatorController.onButtonPressed('7'), 
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '8',
                       onPressed: () =>
                           calculatorController.onButtonPressed('8'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '9',
                       onPressed: () =>
                           calculatorController.onButtonPressed('9'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '÷',
@@ -126,22 +117,16 @@ class Home extends StatelessWidget {
                       label: '4',
                       onPressed: () =>
                           calculatorController.onButtonPressed('4'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '5',
                       onPressed: () =>
                           calculatorController.onButtonPressed('5'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '6',
                       onPressed: () =>
                           calculatorController.onButtonPressed('6'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '×',
@@ -153,22 +138,16 @@ class Home extends StatelessWidget {
                       label: '1',
                       onPressed: () =>
                           calculatorController.onButtonPressed('1'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '2',
                       onPressed: () =>
                           calculatorController.onButtonPressed('2'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '3',
                       onPressed: () =>
                           calculatorController.onButtonPressed('3'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '–',
@@ -186,8 +165,6 @@ class Home extends StatelessWidget {
                       label: '0',
                       onPressed: () =>
                           calculatorController.onButtonPressed('0'),
-                          labelColor: themeController.isDarkMode.value 
-                            ? Colors.white : Colors.black,
                     ),
                     CalculatorButton(
                       label: '+',

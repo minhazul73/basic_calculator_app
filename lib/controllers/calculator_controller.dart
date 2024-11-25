@@ -31,6 +31,7 @@ class CalculatorController extends GetxController {
         if (_secondOperand != null) {
           // Update display with result
           display.value = _calculateResult();
+          _firstOperand = null;
         } else {
           display.value = 'Error';
         }
